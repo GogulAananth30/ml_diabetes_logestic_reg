@@ -24,6 +24,12 @@ feature_columns = [
     "Age"
 ]
 
+@app.route("/")
+def home():
+    return {
+        "message": "Diabetes Prediction API is running",
+        "endpoint": "/predict"
+    }
 
 @app.route("/predict", methods=["POST"])
 def predict():
